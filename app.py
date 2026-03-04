@@ -124,6 +124,7 @@ def upload():
 
     # OCR
     # OCR
+# OCR
 try:
     image = Image.open(filepath)
     extracted_text = pytesseract.image_to_string(image)
