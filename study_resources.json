@@ -1,0 +1,24 @@
+{
+  "Maths": {
+    "Real Numbers": [
+      "https://ncert.nic.in/textbook.php?jemh1=1-14",
+      "https://www.youtube.com/results?search_query=CBSE+Class+10+Real+Numbers"
+    ],
+    "Coordinate Geometry": [
+      "https://ncert.nic.in/textbook.php?jemh1=7-14",
+      "https://www.youtube.com/results?search_query=CBSE+Class+10+Coordinate+Geometry"
+    ]
+  },
+  "Science": {
+    "Chemical Reactions and Equations": [
+      "https://ncert.nic.in/textbook.php?jesc1=1-16",
+      "https://www.youtube.com/results?search_query=CBSE+Class+10+Chemical+Reactions"
+    ]
+  },
+  "Social": {
+    "Resources and Development": [
+      "https://ncert.nic.in/textbook.php?jess1=1-16",
+      "https://www.youtube.com/results?search_query=CBSE+Class+10+Resources+and+Development"
+    ]
+  }
+}

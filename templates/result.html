@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+
+<h2>File Uploaded Successfully!</h2>
+<p><strong>File name:</strong> {{ filename }}</p>
+
+<h3>Extracted Text</h3>
+<pre>{{ text }}</pre>
+
+<h3>Detected Subject & Chapter</h3>
+<p><strong>Main Match:</strong> {{ top_subject }} - {{ top_chapter }}</p>
+<p><strong>Confidence:</strong> {{ matches[0].confidence }}%</p>
+
+<h4>Top Matches</h4>
+<ul>
+{% for match in matches %}
+<li>{{ match.subject }} - {{ match.chapter }} ({{ match.confidence }}%)</li>
+{% endfor %}
+</ul>
+
+<h3>Important Keywords</h3>
+<ul>
+{% for word in keywords %}
+<li>{{ word }}</li>
+{% endfor %}
+</ul>
+
+<h2>Summary</h2>
+<p>{{ summary }}</p>
+
+<h3>Time Remaining: <span id="timer">05:00</span></h3>
+
+<h2>Quiz</h2>
+
+<form method="post" action="/submit_quiz">
+
+{% for q in quiz %}
+{% set question_index = loop.index0 %}
+
+<p><strong>{{ loop.index }}. {{ q.question }}</strong></p>
+
+{% for option in q.options %}
+<input type="radio"
+name="q{{ question_index }}"
+value="{{ option.key }}">
+{{ option.key }}. {{ option.text }}<br>
+{% endfor %}
+
+<br>
+
+{% endfor %}
+
+<button type="submit">Submit Quiz</button>
+
+</form>
+
+<script>
+
+let timeLeft = 300;
+
+const timerElement = document.getElementById("timer");
+
+const countdown = setInterval(function() {
+
+let minutes = Math.floor(timeLeft / 60);
+let seconds = timeLeft % 60;
+
+seconds = seconds < 10 ? "0" + seconds : seconds;
+
+timerElement.textContent = minutes + ":" + seconds;
+
+timeLeft--;
+
+if (timeLeft < 0) {
+
+clearInterval(countdown);
+
+alert("Time is up! Submitting quiz automatically.");
+
+document.querySelector("form").submit();
+
+}
+
+}, 1000);
+
+</script>
+
+</body>
+</html>

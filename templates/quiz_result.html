@@ -1,0 +1,50 @@
+<h1>Quiz Results</h1>
+
+<h2>Score: {{ score }}%</h2>
+
+{% for r in results %}
+
+<p><strong>{{ loop.index }}. {{ r.question }}</strong></p>
+
+<p>Your Answer: {{ r.selected }}</p>
+
+<p>Correct Answer: {{ r.correct }}</p>
+
+{% if r.is_correct %}
+<p style="color:green;">Correct ✅</p>
+{% else %}
+<p style="color:red;">Incorrect ❌</p>
+<p><strong>Explanation:</strong> {{ r.explanation }}</p>
+{% endif %}
+
+<hr>
+
+{% endfor %}
+
+
+<h2>AI Feedback</h2>
+<p>{{ feedback }}</p>
+
+
+{% if study_links %}
+<h3>Recommended Study Resources</h3>
+
+<ul>
+{% for link in study_links %}
+<li><a href="{{ link }}" target="_blank">{{ link }}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
+
+
+<br><br>
+
+<!-- Dashboard Button -->
+<a href="/dashboard">
+<button>View Progress Dashboard</button>
+</a>
+<a href="/dashboard">
+<button style="padding:10px 20px;font-size:16px;background:#4CAF50;color:white;border:none;border-radius:5px;">
+View Progress Dashboard
+</button>
+</a>

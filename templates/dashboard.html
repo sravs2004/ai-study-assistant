@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Student Dashboard</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1>Student Progress Dashboard</h1>
+
+<canvas id="scoreChart" width="400" height="200"></canvas>
+
+<script>
+
+const ctx = document.getElementById('scoreChart');
+
+new Chart(ctx, {
+
+type: 'line',
+
+data: {
+
+labels: {{ subjects | tojson }},
+
+datasets: [{
+
+label: 'Quiz Score (%)',
+
+data: {{ scores | tojson }},
+
+borderColor: "blue",
+
+borderWidth: 3,
+
+fill: false
+
+}]
+
+},
+
+options: {
+
+scales: {
+
+y: {
+
+beginAtZero: true,
+
+max: 100
+
+}
+
+}
+
+}
+
+});
+
+</script>
+
+
+<h2>Quiz Attempts</h2>
+
+<ul>
+
+{% for r in records %}
+
+<li>
+{{ r.subject }} - {{ r.chapter }} → {{ r.score }}%
+</li>
+
+{% endfor %}
+
+</ul>
+
+
+<hr>
+
+
+<h2>Weak Topics Analysis</h2>
+
+{% if weak_topics %}
+
+<ul>
+
+{% for w in weak_topics %}
+
+<li>
+
+<strong>{{ w.subject }}</strong> (Average Score: {{ w.average }}%)
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+{% else %}
+
+<p>No weak topics detected. Excellent performance!</p>
+
+{% endif %}
+
+
+<br>
+
+<a href="/">
+<button>Back to Upload Page</button>
+</a>
+
+</body>
+
+</html>

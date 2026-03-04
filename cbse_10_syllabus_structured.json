@@ -1,0 +1,1044 @@
+{
+    "English": {
+        "ENGLISH LANGUAGE AND LITERATURE": {
+            "READING SKILLS": {
+                "Reading Comprehension through Unseen Passage": [
+                    "Discursive passage of 400-450 words",
+                    "Case-based factual passage with visual input"
+                ]
+            },
+            "WRITING SKILLS AND GRAMMAR": {
+                "Grammar": [
+                    "Determiners",
+                    "Tenses",
+                    "Modals",
+                    "Subject-verb concord",
+                    "Reported speech",
+                    "Commands and requests",
+                    "Statements",
+                    "Questions"
+                ],
+                "Writing Skills": [
+                    "Descriptive Paragraph",
+                    "Story/Diary Entry"
+                ]
+            },
+            "LANGUAGE THROUGH LITERATURE": {
+                "Reference to the Context": [
+                    "Extract from Drama/Prose",
+                    "Extract from Poetry"
+                ],
+                "Short & Long Answer Questions": {
+                    "BEEHIVE": [
+                        "Short Answer Type Questions",
+                        "Long Answer Type Questions"
+                    ],
+                    "MOMENTS": [
+                        "Short Answer Type Questions",
+                        "Long Answer Type Questions"
+                    ]
+                }
+            },
+            "PRESOCRIBED BOOKS": {
+                "BEEHIVE": [
+                    "Prose",
+                    "My Childhood",
+                    "The Fun"
+                ],
+                "MOMENTS": []
+            }
+        },
+        "English": {
+            "Communication Skills and Grammar": [
+                "Determiners",
+                "Tenses",
+                "Modals",
+                "Subject \u2013 verb concord",
+                "Reported speech",
+                "Commands and requests",
+                "Statements",
+                "Questions"
+            ],
+            "Writing Skills": [
+                "Writing a Formal Letter",
+                "Writing an Analytical Paragraph"
+            ],
+            "Language through Literature": [
+                "Reference to the Context",
+                "Short & Very Long Answer Questions"
+            ]
+        },
+        "Books": {
+            "FIRST FLIGHT": {
+                "Prose": [
+                    "A Letter to God",
+                    "Nelson Mandela - Long Walk to Freedom",
+                    "Stories About Flying",
+                    "From the Diary of Anne Frank",
+                    "Glimpses of India",
+                    "Mijbil the Otter",
+                    "Madam Rides the Bus",
+                    "The Sermon at Benares",
+                    "The Proposal (Play)"
+                ],
+                "Poems": [
+                    "Dust of Snow",
+                    "Fire and Ice",
+                    "A Tiger in the Zoo",
+                    "How to Tell Wild Animals",
+                    "The Ball Poem",
+                    "Amanda!",
+                    "The Trees",
+                    "Fog",
+                    "The Tale of Custard the Dragon",
+                    "For Anne Gregory"
+                ]
+            },
+            "FOOTPRINTS WITHOUT FEET": [
+                "A Triumph of Surgery",
+                "The Thief's Story",
+                "The Midnight Visitor",
+                "A Question of Trust",
+                "Footprints Without Feet"
+            ]
+        },
+        "Listening and Speaking Skills": {
+            "Introduction": [],
+            "Parameters for Assessment": [
+                "Interactive competence",
+                "Fluency",
+                "Pronunciation",
+                "Language"
+            ],
+            "Assessment Criteria": {
+                "Interactive Competence": [
+                    "Initiation & turn taking",
+                    "Relevance to the topic"
+                ],
+                "Fluency": [
+                    "Cohesion",
+                    "Coherence",
+                    "Speed of delivery"
+                ],
+                "Pronunciation": [],
+                "Language": [
+                    "Grammar",
+                    "Vocabulary"
+                ]
+            },
+            "Suggestive Rubric": {
+                "Interaction": [
+                    "Initiates & takes turn",
+                    "Develops interaction",
+                    "Contributes logically"
+                ],
+                "Fluency & Coherence": [
+                    "Speaks fluently",
+                    "Without noticeable effort",
+                    "Develops topic fully & coherently"
+                ],
+                "Pronunciation": [
+                    "Pronounces correctly",
+                    "Articulates clearly"
+                ],
+                "Vocabulary & Language": [
+                    "Uses appropriate grammar",
+                    "Uses appropriate vocabulary"
+                ]
+            }
+        },
+        "Chapter": {
+            "Subtopics": [
+                "Grammar",
+                "Vocabulary",
+                "Communication",
+                "Errors",
+                "Listening and speaking skills"
+            ]
+        }
+    },
+    "Hindi": {},
+    "Hindi2": {},
+    "Maths": {
+        "I NUMBER SYSTEMS": {
+            "1 REAL NUMBERS": [
+                "Review of representation of natural numbers, integers, rational numbers on the number line",
+                "Representation of terminating/non-terminating recurring decimals",
+                "Rational numbers as recurring/ terminating decimals",
+                "Examples of non-recurring/non-terminating decimals",
+                "Existence of non-rational numbers (irrational numbers) such as \u221a2, \u221a3 and their representation on the number line",
+                "Definition of nth root of a real number",
+                "Rationalization (with precise meaning) of real numbers"
+            ]
+        },
+        "II ALGEBRA": [],
+        "III COORDINATE GEOMETRY": [],
+        "IV GEOMETRY": [],
+        "V MENSURATION": [],
+        "VI STATISTICS": [],
+        "1. POLYNOMIALS": {
+            "1. Zeros of a polynomial": "",
+            "2. Relationship between zeros and coefficients of quadratic polynomials": ""
+        },
+        "2. PAIR OF LINEAR EQUATIONS IN TWO VARIABLES": {
+            "1. Pair of linear equations in two variables and graphical method of their solution": "",
+            "2. Algebraic conditions for number of solutions": "",
+            "3. Solution of a pair of linear equations in two variables algebraically - by substitution, by elimination": ""
+        },
+        "3. QUADRATIC EQUATIONS": {
+            "1. Standard form of a quadratic equation": "",
+            "2. Solutions of quadratic equations (only real roots)": "",
+            "3. Situational problems based on quadratic equations": ""
+        },
+        "4. ARITHMETIC PROGRESSIONS": {
+            "1. Motivation for studying Arithmetic Progression": "",
+            "2. Derivation of the nth term and sum of the first n terms of AP": ""
+        },
+        "5. COORDINATE GEOMETRY": {
+            "1. Review: Concepts of geometrical shapes": ""
+        },
+        "6. REAL NUMBERS": {
+            "1. Review of representation of terminating / non-terminating recurring decimals": "",
+            "2. Proofs of irrationality of \u221a2, \u221a3, \u221a5": ""
+        },
+        "1. TRIANGLES": [
+            "Prove Basic Proportionality Theorem and its converse",
+            "Define and explain similar triangles",
+            "Prove similarity of triangles using different geometric criteria",
+            "State If a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, the other two sides are divided in the same ratio",
+            "State If a line divides two sides of a triangle in the same ratio, the line is parallel to the third side",
+            "State If in two triangles, the corresponding angles are equal, their corresponding sides are proportional and the triangles are similar",
+            "State If the corresponding sides of two triangles are proportional, their corresponding angles are equal and the two triangles are similar",
+            "State If one angle of a triangle is equal to one angle of another triangle and the sides including these angles are proportional, the two triangles are similar"
+        ],
+        "2. CIRCLES": [
+            "Prove The tangent at any point of a circle is perpendicular to the radius through the point of contact",
+            "Prove The lengths of tangents drawn from an external point to a circle are equal"
+        ],
+        "UNIT V: TRIGONOMETRY": {
+            "1. INTRODUCTION TO TRIGONOMETRY": [
+                "Trigonometric ratios of an acute angle of a right-angled triangle",
+                "Proof of their existence",
+                "Motivate the ratios whichever are defined at 0\u00b0 and 90\u00b0",
+                "Values of the trigonometric ratios of 30\u00b0, 45\u00b0 and 60\u00b0",
+                "Relationships between the ratios"
+            ],
+            "2. TRIGONOMETRIC IDENTITIES": [
+                "Uses Trigonometric identities to solve problems",
+                "Proves trigonometric identities using sin2A + cos2A"
+            ]
+        },
+        "UNIT VI: TRIGONOMETRY": {
+            "1. Proof and applications of the identity sin2A + cos2A = 1": [],
+            "2. Simple identities": [],
+            "3. HEIGHTS AND DISTANCES": {
+                "Angle of elevation": [],
+                "Angle of Depression": [],
+                "Simple problems on heights and distances": []
+            }
+        },
+        "UNIT VI: MENSURATION": {
+            "1. AREAS RELATED TO CIRCLES": {
+                "Area of sectors and segments of a circle": [],
+                "Problems based on areas and perimeter/circumference": []
+            },
+            "2. SURFACE AREAS AND VOLUMES": {
+                "Surface areas and volumes of combinations of solids": [],
+                "Cubes": [],
+                "Cuboids": [],
+                "Spheres": [],
+                "Hemispheres": [],
+                "Right circular cylinders/cones": []
+            }
+        },
+        "UNIT VII: STATISTICS AND PROBABILITY": {
+            "1. STATISTICS": {
+                "Mean, median and mode of grouped data": [],
+                "Computes the mean, median and mode": []
+            },
+            "2. PROBABILITY": {
+                "Classical definition of probability": [],
+                "Simple problems on finding the probability of an event": []
+            }
+        },
+        "Chapter1": {
+            "Subtopics": [
+                "situations by applying acquired knowledge, facts, techniques and rules in a different way",
+                "Analysing: Examine and break information into parts by identifying motives or causes",
+                "Evaluating: Present and defend opinions by making judgments about information, validity of ideas, or quality of work based on a set of criteria",
+                "Creating: Compile information together in a different way by combining elements in a new pattern or proposing alternative solutions"
+            ]
+        }
+    },
+    "Science": {
+        "SCIENCE": {
+            "Chapter 1": {
+                "Subtopics": [
+                    "Classification of elements in the Periodic Table",
+                    "Explores the world of matter",
+                    "Formation of compounds",
+                    "Interactions and properties of elements at the atomic level"
+                ]
+            },
+            "Chapter 2": {
+                "Subtopics": [
+                    "Nature and properties of chemical substances",
+                    "Distillation",
+                    "Crystallisation",
+                    "Chromatography",
+                    "Centrifugation",
+                    "Types and properties of mixtures, solutions, colloids, and suspensions"
+                ]
+            },
+            "Chapter 3": {
+                "Subtopics": [
+                    "Chemical interactions and changes",
+                    "Symbols and chemical equations",
+                    "Acid and base",
+                    "Metal and non-metal",
+                    "Reversible and irreversible reactions"
+                ]
+            },
+            "Chapter 4": {
+                "Subtopics": [
+                    "Newton's laws",
+                    "Effect of forces",
+                    "Change in state of motion",
+                    "Displacement and direction",
+                    "Velocity and acceleration",
+                    "Uniform circular motion",
+                    "Acceleration due to gravity"
+                ]
+            },
+            "Chapter 5": {
+                "Subtopics": [
+                    "Relationship between mass and weight",
+                    "Universal law of gravitation",
+                    "Laws of motion"
+                ]
+            },
+            "Chapter 6": {
+                "Subtopics": [
+                    "Properties of lenses",
+                    "Focus",
+                    "Centre of curvature",
+                    "Image characteristics",
+                    "Ray diagram",
+                    "Telescope",
+                    "Microscope"
+                ]
+            },
+            "Chapter 7": {
+                "Subtopics": [
+                    "Characteristics of circuits",
+                    "Current",
+                    "Voltage",
+                    "Resistance",
+                    "Ohm's law",
+                    "Electricity bill",
+                    "Short circuit",
+                    "Safety measures"
+                ]
+            },
+            "Chapter 8": {
+                "Subtopics": [
+                    "Work in scientific terms",
+                    "Potential and kinetic energy",
+                    "Conservation of energy",
+                    "Mathematical expressions"
+                ]
+            }
+        },
+        "Chapter C-2": {
+            "Subtopics": [
+                "Demonstrates the principle of mechanical advantage by constructing simple machines (system of levers and pulleys)",
+                "Describes the origin and properties of sound (wavelength, frequency, amplitude) and differences in what we hear as it propagates through different instruments"
+            ]
+        },
+        "Chapter C-3": {
+            "Subtopics": [
+                "Explains the role of cellular components (nucleus, mitochondria, endoplasmic reticulum, vacuoles, chloroplast, cell wall), including the semi-permeability of cell membrane in making cell the structural basis of the cellular level living organisms and functional basis of life processes",
+                "Analyses similarities and differences in the life processes involved in nutrition (photosynthesis in plants; absorption of nutrients in fungi; digestion in animals), transport (transport of water in plants; circulation in animals), exchange of materials (respiration and excretion), and reproduction",
+                "Describes mechanisms of heredity (in terms of DNA, genes, chromosomes) and variation (as changes in the sequence of DNA)"
+            ]
+        },
+        "Chapter C-4": {
+            "Subtopics": [
+                "Applies the knowledge of cellular diversity in organisms along with the ecological role organisms play (autotrophic or heterotrophic nutrition) to classify them into five-kingdoms",
+                "Illustrates different levels of organisations of living organisms (from molecules to organisms)",
+                "Analyses different levels of biological organisation from organisms to ecosystems and biomes along with interactions that take place at each level",
+                "Analyses patterns of inheritance of traits in terms of Mendel\u2019s laws and its consequences at a population level (using models and/or simulations)",
+                "Analyses evidences of biological evolution demonstrating the consequences of the process of natural selection in terms of changes: in allele frequency in population, structure, and function of organisms"
+            ]
+        },
+        "Chapter C-5": {
+            "Subtopics": [
+                "Explores how literature and the arts have influenced Science",
+                "Examines a case study related to the use of Science in human life from the perspective of Social Sciences and ethics (e.g., Marie Curie, Jenner, treatment of patients with mental illness, the story of the atomic bomb, green revolution and GMOs, conservation of biodiversity)",
+                "Applies scientific principles to explain phenomena in other subjects (sound pitch, octave, and amplitude in music; use of muscles in dance form and sports)"
+            ]
+        },
+        "Chapter C-6": {
+            "Subtopics": [
+                "Knows and explains the significant contributions of India to all matters (concepts, explanations, methods) that are studied within the curriculum in an integrated manner through history and the present times to the overall"
+            ]
+        },
+        "Chapter 7": {
+            "C-7.1": "States concepts that represent the most current understanding of the matter being studied",
+            "C-7.2": "States questions related to matters in the curriculum for which current scientific understanding is well recognised to be inadequate"
+        },
+        "Chapter 8": {
+            "C-8.1": "Develops accurate and appropriate models to represent real-life events and phenomena",
+            "C-8.2": "Designs and implements a plan for scientific inquiry"
+        },
+        "Chapter 1: Matter - Its Nature and Behaviour": [
+            "Matter in Our Surroundings",
+            "Is Matter Around Us Pure",
+            "Atoms and Molecules",
+            "Structure of atom"
+        ],
+        "Chapter 2: Organization in the Living World": [
+            "Cell - Basic Unit of life",
+            "Tissues, Organs, Organ System, Organism"
+        ],
+        "Chapter 3: Motion, Force and Work": [
+            "Motion",
+            "Force and Newton\u2019s laws"
+        ],
+        "Chapter 4: Food; Food Production": [],
+        "Chapter 1": {
+            "Subtopics": [
+                "Reproductive health need and methods of family planning",
+                "Safe sex vs HIV/AIDS",
+                "Child bearing and women's health",
+                "Heredity and Evolution"
+            ]
+        },
+        "Chapter 2": {
+            "Subtopics": [
+                "Reflection of light by curved surfaces",
+                "Images formed by spherical mirrors",
+                "Refraction",
+                "Laws of refraction",
+                "Refraction of light by spherical lens",
+                "Functioning of a lens in human eye",
+                "Defects of vision and their corrections"
+            ]
+        },
+        "Chapter 3": {
+            "Subtopics": [
+                "Electric current",
+                "Potential difference and electric current",
+                "Ohm's law",
+                "Resistance",
+                "Resistivity",
+                "Factors on which the resistance of a conductor depends",
+                "Series combination of resistors",
+                "Parallel combination of resistors",
+                "Heating effect of electric current",
+                "Magnetic effects of current",
+                "Magnetic field",
+                "Field lines",
+                "Field due to a current carrying conductor"
+            ]
+        },
+        "Chapter 4": {
+            "Subtopics": [
+                "Our environment",
+                "Eco-system",
+                "Environmental problems",
+                "Ozone depletion",
+                "Waste production and their solutions",
+                "Biodegradable and non-biodegradable substances"
+            ]
+        },
+        "Chapter 5": {
+            "Subtopics": [
+                "Nature of sound and its propagation in various media",
+                "Speed of sound",
+                "Range of hearing in humans",
+                "Ultrasound",
+                "Reflection of sound",
+                "Echo"
+            ]
+        },
+        "Chapter 6": {
+            "Subtopics": [
+                "Plant and animal breeding and selection for quality improvement and management",
+                "Use of fertilizers and manures",
+                "Protection from pests and diseases",
+                "Organic farming"
+            ]
+        },
+        "Unit I: Chemical Substances - Nature and Behaviour": {
+            "Chemical Reactions and Equations": [
+                "Chemical reactions",
+                "Chemical equation",
+                "Balanced chemical equation",
+                "Types of chemical reactions",
+                "Combination",
+                "Decomposition",
+                "Displacement",
+                "Double displacement",
+                "Precipitation",
+                "Endothermic exothermic reactions",
+                "Oxidation and reduction"
+            ],
+            "Acids, Bases and Salts": [
+                "Definitions in terms of furnishing of H+ and OH\u2013 ions",
+                "Identification using indicators",
+                "Chemical properties",
+                "Examples and uses",
+                "Neutralization",
+                "Concept of pH scale",
+                "Importance of pH in everyday life",
+                "Preparation and uses of Sodium Hydroxide",
+                "Bleaching powder",
+                "Baking soda",
+                "Washing soda",
+                "Plaster of Paris"
+            ],
+            "Metals and Non-metals": [
+                "Properties of metals and non-metals",
+                "Reactivity series",
+                "Formation and properties of ionic compounds",
+                "Basic metallurgical processes",
+                "Corrosion and its prevention"
+            ],
+            "Carbon and its Compounds": [
+                "Covalent bonds",
+                "Formation and properties of covalent compounds",
+                "Versatile nature of carbon",
+                "Hydrocarbons",
+                "Saturated and unsaturated",
+                "Homologous series",
+                "Nomenclature of alkanes",
+                "Alkenes",
+                "Alkyne and carbon compounds",
+                "Chemical properties of carbon compounds",
+                "Ethanol and Ethanoic acid",
+                "Soaps and detergents"
+            ]
+        },
+        "Unit II: World of Living": {
+            "Life processes": [
+                "Basic concept of nutrition",
+                "Respiration",
+                "Transport and excretion in plants and animals"
+            ],
+            "Control and co-ordination in animals and plants": [
+                "Tropic movements in plants",
+                "Introduction of plant hormones",
+                "Control and co-ordination in animals",
+                "Nervous system",
+                "Voluntary",
+                "Involuntary and reflex action",
+                "Chemical co-ordination",
+                "Animal hormones"
+            ],
+            "Reproduction": [
+                "Reproduction in animals and plants"
+            ]
+        },
+        "Unit III: Natural Phenomena": [
+            "Verification of the laws of reflection of sound",
+            "Determination of the density of solid",
+            "Establishing the relation between the loss in weight of a solid when fully immersed in water",
+            "Determination of the speed of a pulse propagated through a stretched string",
+            "Verification of the law of conservation of mass in a chemical reaction"
+        ],
+        "Unit IV: Effects of Current": [],
+        "Unit V: Natural Resources": [],
+        "Unit-I": {
+            "Chemical Reactions and Equations": [
+                "Displacement reaction",
+                "Double displacement reaction",
+                "Action of water on quicklime",
+                "Action of heat on ferrous sulphate crystals",
+                "Iron nails kept in copper sulphate solution",
+                "Reaction between sodium sulphate and barium chloride solutions"
+            ],
+            "Study of the following properties of acetic acid (ethanoic acid)": [
+                "Odour",
+                "Solubility in water",
+                "Effect on litmus",
+                "Reaction with Sodium Hydrogen Carbonate"
+            ],
+            "Study of the comparative cleaning capacity of a sample of soap in soft and hard water": []
+        },
+        "Unit-II": {
+            "World of Living": [
+                "Preparing a temporary mount of a leaf peel to show stomata",
+                "Experimentally show that carbon dioxide is given out during respiration",
+                "Studying binary fission in Amoeba, and budding in yeast and Hydra with the help of prepared slides",
+                "Identification of the different parts of an embryo of a dicot seed (pea, gram or red kidney bean)"
+            ]
+        },
+        "Unit-III": {
+            "Magnetic Effects of Electric Current": [
+                "Determination of the focal length of Concave mirror",
+                "Convex lens by obtaining the image of a distant object",
+                "Tracing the path of a ray of light passing through a rectangular glass slab for different angles of incidence",
+                "Tracing the path of the rays of light through a glass prism"
+            ]
+        },
+        "Unit-IV": {
+            "Electricity": [
+                "Studying the dependence of potential difference (V) across a resistor on the current (I) passing through it and determine its resistance",
+                "Determination of the equivalent resistance of two resistors when connected in series and parallel"
+            ]
+        },
+        "Chapter": {
+            "Competency Based Questions": {
+                "Subtopics": [
+                    "Assertion",
+                    "Reasoning type questions",
+                    "SA",
+                    "LA",
+                    "Source-based",
+                    "Case-based",
+                    "Passage-based",
+                    "Integrated assessment questions"
+                ]
+            },
+            "Internal Assessment": {
+                "Subtopics": [
+                    "Periodic Assessment",
+                    "Subject Enrichment (Practical Work)",
+                    "Portfolio"
+                ]
+            },
+            "Suggestive Verbs": {
+                "Subtopics": [
+                    "Demonstrate Knowledge and Understanding",
+                    "Application of Knowledge/Concepts",
+                    "Formulate, Analyze, Evaluate and Create"
+                ]
+            }
+        }
+    },
+    "Social": {
+        "India and the Contemporary World - I": [],
+        "India and the Contemporary World - II": [],
+        "Democratic Politics": [],
+        "Understanding Economic Development": [],
+        "Disaster Management": [],
+        "Chapter 1": {
+            "Subtopics": [
+                "Role of major ports in imports and exports",
+                "Emergence of Deccan airways and its impact on domestic airways",
+                "Contribution of waterways and airways to economic growth of India"
+            ]
+        },
+        "Chapter 2": {
+            "Subtopics": [
+                "Introduction to the World Trade Organization (WTO)",
+                "Role of the WTO in building new nations post-colonialization",
+                "How the WTO helps new nations post-colonialization"
+            ]
+        },
+        "Chapter 3": {
+            "Subtopics": [
+                "What is the WTO?",
+                "Functions of the WTO",
+                "Technical assistance and advice provided by the WTO"
+            ]
+        },
+        "Chapter 4": {
+            "Subtopics": [
+                "Impact of the WTO on new nations post-colonialization",
+                "Economic growth and development in new nations",
+                "Conclusion on the role of the WTO in building new nations"
+            ]
+        },
+        "Chapter 5": {
+            "Subtopics": [
+                "End of Bretton Woods and the Beginning of Globalisation",
+                "Reasons for the end of the Bretton Woods system"
+            ]
+        },
+        "Modern Indian Nation": [],
+        "CG -4": [
+            "Develops an understanding of the inter-relationship between human beings and their physical environment",
+            "how that influences the livelihoods, cultural diversity, and biodiversity of the region"
+        ],
+        "CG -5": [
+            "Understand the Indian Constitution",
+            "explores the essence of Indian democracy and the characteristics of a democratic government"
+        ],
+        "CG -6": [
+            "Understand and analyse social, cultural, and political life in India over time",
+            "the underlying historical Indian ethos and philosophy of unity in diversity",
+            "recognises challenges faced in these areas in the past and present and the efforts made to address them"
+        ],
+        "CG -7": [
+            "Develop an understanding of the inter-relationship between human beings and their physical environment",
+            "how that influences the livelihoods, cultural diversity, and biodiversity of the region"
+        ],
+        "CG -8": [
+            "Evaluate the economic development of a country in terms of its impact on the lives of its people and nature"
+        ],
+        "CG-9": [
+            "Understand and appreciate the contribution of India through history and present times, to the overall field of Social Science, and the disciplines that constitute it"
+        ],
+        "COMPETENCIES": [
+            "C-2.1 Explain historical events and processes with different types of sources with specific examples from India and world history",
+            "C-2.3 Trace aspects of continuity and change in different phases of world history",
+            "C-2.4 Explain the growth of new ideas and practices across the world and how they affected the course of world history",
+            "C-2.5 Recognise the various practices that arose and came to be condemned later on",
+            "C3.2 Identify and analyse important phases of the Indian national freedom struggle against British colonial rule",
+            "C-4.1 Locate physiographic regions of India and the climatic zones of the country"
+        ],
+        "Globe": {
+            "Subtopics": [
+                "Explain important geographical concepts, characteristics of key landforms, their origin, and other physical factors of a region",
+                "Draw inter-linkages between various components of the physical environment",
+                "Analyse and evaluate the inter-relationship between the natural environment and human beings and their cultures across regions",
+                "Critically evaluate the impact of human interventions on the environment",
+                "Develop sensitivity towards the judicious use of natural resources and suggests measures for their conservation"
+            ]
+        },
+        "Indian Constitution": {
+            "Subtopics": [
+                "Understand that the Indian Constitution draws from the great cultural heritage and common aspirations of the Indian nation",
+                "Appreciate fundamental Constitutional values and identify their significance for the prosperity of the Indian nation",
+                "Explain that fundamental rights are the most basic human rights, and they flourish when people also perform their fundamental duties",
+                "Analyse the basic features of a democracy and democratic government and its history in India and across the world",
+                "Analyse the critical role of non-state and non-market participants in the functioning of a democratic government and society"
+            ]
+        },
+        "Indian Ethos and Cultural Integration": {
+            "Subtopics": [
+                "Understands how the Indian ethos and the cultural integration across India did not attempt uniformity, but respected and promoted a rich diversity in Indian society",
+                "Understand that despite the promotion of unity in diversity, forms of inequality, injustice, and discrimination have occurred in different sections of society at different times"
+            ]
+        },
+        "Economics": {
+            "Development": [],
+            "Sectors of the Indian Economy": [],
+            "Money and Credit": [],
+            "Globalisation and The Indian Economy": [
+                "What is Globalisation?",
+                "Factors that have enabled Globalisation"
+            ]
+        },
+        "History (India and the Contemporary World-II)": {
+            "subtopics": [
+                "The Rise of Nationalism in Europe",
+                "Nationalism in India",
+                "The Making of a Global World",
+                "The Age of Industrialisation",
+                "Print Culture and the Modern world"
+            ]
+        },
+        "Geography (Contemporary India-II)": {
+            "subtopics": [
+                "Resources and Development",
+                "Forest and Wildlife Resources",
+                "Water resources",
+                "Agriculture",
+                "Minerals and energy Resources",
+                "Manufacturing Industries",
+                "Lifelines of National Economy"
+            ]
+        },
+        "Political Science (Democratic Politics-II)": {
+            "I": {
+                "1": "Power-sharing",
+                "2": "Federalism"
+            },
+            "II": {
+                "3": "Gender, Religion and Caste"
+            },
+            "III": {
+                "4": "Political Parties"
+            },
+            "IV": {
+                "5": "Outcomes of Democracy"
+            }
+        },
+        "Economics (Understanding Economic Development)": {
+            "1": "Development",
+            "2": "Sectors of the Indian Economy",
+            "3": "Money and Credit",
+            "4": {
+                "Globalisation and the Indian Economy": [
+                    "What is Globalisation?",
+                    "Factors that have enabled Globalisation",
+                    "Production across the countries",
+                    "Chinese toys in India",
+                    "World Trade Organisation",
+                    "The Struggle for a Fair Globalisation"
+                ]
+            },
+            "5": "Consumer Rights (Project Work)"
+        },
+        "HISTORY: India and the Contemporary World - II": {
+            "Chapter I": "The Rise of Nationalism in Europe",
+            "Chapter 2": "Nationalism in India",
+            "Chapter 3": {
+                "The Making of a Global World": [
+                    "The pre-modern world",
+                    "19th century 1815 -1914",
+                    "The inter- war economy",
+                    "Rebuilding of world economy: the post war era."
+                ]
+            },
+            "Chapter 4": "The Age of Industrialisation"
+        },
+        "Chapter 7": {
+            "Subtopics": [
+                "Objectives of project work",
+                "Development of life skills and application of social science concepts"
+            ]
+        },
+        "Political Science: Democratic Politics - II": {
+            "Chapter 1- Power \u2013 sharing": [
+                "Enumerate the need for power sharing in democracy.",
+                "Analyse the challenges faced by countries like Belgium and Sri Lanka ensuring effective power sharing.",
+                "Compare and contrast the power sharing of India with Sri Lanka and Belgium.",
+                "Summarise the purpose of power sharing in preserving the unity and stability of a country"
+            ],
+            "Chapter 2-Federalism": [
+                "Infer how federalism is being practised in India.",
+                "Analyse the policies and politics that has strengthened federalism in practice."
+            ],
+            "Chapter 3- Gender, Religion and Caste": [
+                "Examine the role and differences of Gender, religion and Caste in practicing Democracy.",
+                "Analyse that different expressions based on the differences, are healthy or otherwise in a democracy"
+            ],
+            "Chapter 4- Political Parties": [
+                "Understand the process of parties getting elected.",
+                "Know the significance of the right to vote and exercise the duties as citizens of a nation.",
+                "Examine the role, purpose and no. of Political Parties in Democracy."
+            ],
+            "Chapter 5- Outcomes of Democracy": [
+                "Enumerates how the success of democracy depends on quality of government, economic well- being, inequality, social differences, conflict, freedom and dignity."
+            ]
+        },
+        "Economics: Understanding Economic Development": {
+            "Chapter- 1. Development": [
+                "Enumerate and examine the different processes involved in setting developmental Goals.",
+                "Analyse and infer how the per capita income depicts the economic condition of the nation.",
+                "Evaluate the development goals with reference to their efficacy, implemental strategies, relevance to current requirements of the nation.",
+                "Compare the per capita income of some countries and infer reasons for the variance.",
+                "Analyse the multiple perspectives on the need of development."
+            ],
+            "Chapter 2- Sectors of the Indian Economy": [
+                "Analyse and infer how the economic activities in different sectors contribute to the overall growth and development of the Indian economy.",
+                "Propose solutions to identified problems in different sectors based on their understanding.",
+                "Summarise how the organised and unorganised sectors are providing employment",
+                "Enumerate the role of the unorganised sector in impacting Per Capita Income currently and propose suggestive steps to reduce the unorganised sector for more productive contributions to GDP."
+            ]
+        },
+        "Geography": {
+            "Resources and Development": [],
+            "Forest and Wildlife Resources": [],
+            "Water Resources": [],
+            "Agriculture": [],
+            "Mineral and Energy Resources": [],
+            "Manufacturing Industries": [],
+            "Lifelines of National Economy": {
+                "Major Sea Ports": [
+                    "Kandla",
+                    "Tuticorin",
+                    "Mumbai",
+                    "Chennai",
+                    "Marmagao",
+                    "Visakhapatnam",
+                    "New Mangalore",
+                    "Paradip",
+                    "Kochi",
+                    "Haldia"
+                ],
+                "International Airports": [
+                    "Amritsar (Raja Sansi-Sri Guru Ram Das ji)",
+                    "Delhi (Indira Gandhi)",
+                    "Mumbai (Chhatrapati Shivaji)",
+                    "Chennai (Meenambakkam)",
+                    "Kolkata (Netaji Subhash Chandra Bose)",
+                    "Hyderabad (Rajiv Gandhi)"
+                ],
+                "Iron and Steel Plants": [
+                    "Durgapur",
+                    "Bokaro",
+                    "Jamshedpur",
+                    "Bhilai",
+                    "Vijayanagar",
+                    "Salem"
+                ],
+                "Software Technology Parks": [
+                    "Noida",
+                    "Gandhinagar",
+                    "Mumbai",
+                    "Pune",
+                    "Hyderabad",
+                    "Bengaluru",
+                    "Chennai",
+                    "Thiruvananthapuram"
+                ]
+            }
+        },
+        "History": {
+            "The Rise of Nationalism in Europe": [],
+            "Nationalism in India": [],
+            "The Making of a Global World": [
+                "Sub topics 1 to 1.3"
+            ],
+            "Print Culture and the Modern World": []
+        },
+        "Political Science": {
+            "Power Sharing": [],
+            "Federalism": [],
+            "Gender, Religion and Caste": [],
+            "Political Parties": [],
+            "Outcomes of Democracy": []
+        },
+        "Guidelines for Internal Assessment": {
+            "Subtopics": [
+                "Periodic Assessment",
+                "Multiple Assessment",
+                "Subject Enrichment",
+                "Portfolio"
+            ]
+        },
+        "Prescribed Textbooks": {
+            "Subtopics": [
+                "History",
+                "Political Science",
+                "Geography",
+                "Economics",
+                "Disaster Management"
+            ]
+        },
+        "Annexure I": {
+            "Subtopics": [
+                "Project Work",
+                "Objectives",
+                "Competencies"
+            ]
+        },
+        "Chapter 6": {
+            "Subtopics": [
+                "Impact of Globalization in India and role of waterways and airways",
+                "New Economic Policy of 1991 - objectives, features and impacts"
+            ]
+        },
+        "Interdisciplinary Project: Class X": {
+            "History": [
+                "Making of a Global World",
+                "Analyse the implication of globalisation for local economies",
+                "Discuss how globalisation is experienced differently by different social groups"
+            ],
+            "Geography": [
+                "Lifelines of National Economy",
+                "Enumerates how transportation works as a lifeline of the economy",
+                "Analyse and infer the impact of"
+            ]
+        },
+        "Interdisciplinary Project": {
+            "Project Details": [
+                "Name of the Students (Team)",
+                "Class",
+                "Section",
+                "Topics of Interdisciplinary",
+                "Title of the Project",
+                "Objectives"
+            ],
+            "Assessment Methods": [
+                "Surveys",
+                "Interviews",
+                "Research work",
+                "Observation",
+                "Story based Presentation",
+                "Art integration",
+                "Quiz",
+                "Debate",
+                "Role play",
+                "Viva",
+                "Group discussion",
+                "Visual expression",
+                "Interactive bulletin boards",
+                "Gallery walks",
+                "Exit cards",
+                "Concept maps",
+                "Peer assessment",
+                "Self-assessment",
+                "Technology integration"
+            ],
+            "Evidences": [
+                "Photos",
+                "Excerpts from Interviews",
+                "Observations",
+                "Videos",
+                "Research References"
+            ],
+            "Presentation": [
+                "Link of PPT",
+                "Shared documents",
+                "Digital",
+                "Handwritten"
+            ],
+            "Miscellaneous": [
+                "Acknowledgement",
+                "References",
+                "Reflections"
+            ]
+        },
+        "Rubrics for Interdisciplinary Project": {
+            "Criteria": [
+                "Research Work",
+                "Collaboration & Communication",
+                "Presentation & Content relevance",
+                "Competencies"
+            ],
+            "Sub-criteria": [
+                "Creativity",
+                "Analytical skills",
+                "Evaluation",
+                "Synthesizing"
+            ]
+        }
+    },
+    "Telugu": {
+        "Chandassu": [
+            "Utpalamala",
+            "Champakamala",
+            "Mattebham",
+            "Shardulam"
+        ],
+        "Samaasaalu": [
+            "Dwandva",
+            "Dvigu",
+            "Bahuvreehi & Rupaka Samaasaalu"
+        ],
+        "Alankaralu": [
+            "Upama",
+            "Atisayokti",
+            "Arthantaranyasa",
+            "Kramalankaralu"
+        ],
+        "Jaatiyalu": [],
+        "Saametalu": [],
+        "Paryaya Padaalu": [],
+        "Literature Section": {
+            "Prose": [
+                "Bathuku Gampa",
+                "Upanyasa kala",
+                "Chejaarina Baalyam",
+                "Jeevani",
+                "Kanya Shulkam"
+            ],
+            "Poetry": [
+                "Prathyaksha Daivaalu",
+                "Sataka Madhuryam",
+                "Prakruthi Sandesam",
+                "Raja Dharmam",
+                "Yuddha Vijetha"
+            ],
+            "Non-Detail Text": [
+                "RAMAYANAM"
+            ]
+        }
+    }
+}

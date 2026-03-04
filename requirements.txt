@@ -1,0 +1,11 @@
+flask
+gunicorn
+sentence-transformers
+faiss-cpu
+groq
+pytesseract
+Pillow
+easyocr
+torch
+torchvision
+numpy
