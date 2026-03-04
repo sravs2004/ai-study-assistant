@@ -5,11 +5,11 @@ import json
 import numpy as np
 import faiss
 from sentence_transformers import SentenceTransformer
-from PIL import Image
-import easyocr
 import datetime
+import pytesseract
+from PIL import Image
 
-reader = easyocr.Reader(['en', 'te'], gpu=False)
+
 
 # Load embedding model
 model = SentenceTransformer("all-MiniLM-L6-v2")
@@ -123,18 +123,16 @@ def upload():
     file.save(filepath)
 
     # OCR
-    try:
+    # OCR
+try:
+    image = Image.open(filepath)
+    extracted_text = pytesseract.image_to_string(image)
 
-        result = reader.readtext(filepath, detail=0)
+    if extracted_text.strip() == "":
+        extracted_text = "No readable text detected in the image."
 
-        extracted_text = " ".join(result)
-
-        if extracted_text.strip() == "":
-            extracted_text = "No readable text detected in the image."
-
-    except Exception as e:
-
-        extracted_text = f"OCR error: {str(e)}"
+except Exception as e:
+    extracted_text = f"OCR error: {str(e)}"
 
     # Semantic detection
     matches = find_similar_chapters(extracted_text)
@@ -276,4 +274,4 @@ if __name__ == "__main__":
 
     port = int(os.environ.get("PORT", 10000))
 
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port, debug=False)

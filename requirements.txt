@@ -4,8 +4,5 @@ sentence-transformers
 faiss-cpu
 groq
 pytesseract
-Pillow
-easyocr
-torch
-torchvision
+pillow
 numpy
