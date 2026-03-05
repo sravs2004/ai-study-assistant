@@ -8,6 +8,7 @@ from sentence_transformers import SentenceTransformer
 import datetime
 import pytesseract
 from PIL import Image
+import fitz
 
 # Load embedding model
 
@@ -20,7 +21,7 @@ index = faiss.read_index("syllabus_index.faiss")
 # Load metadata
 
 with open("chapter_metadata.json", "r", encoding="utf-8") as f:
-    chapter_metadata = json.load(f)
+chapter_metadata = json.load(f)
 
 app = Flask(**name**)
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
@@ -129,16 +130,30 @@ os.makedirs(upload_folder, exist_ok=True)
 filepath = os.path.join(upload_folder, file.filename)
 file.save(filepath)
 
-# OCR
+# OCR or PDF extraction
 try:
-    image = Image.open(filepath)
-    extracted_text = pytesseract.image_to_string(image)
+
+    extracted_text = ""
+
+    if file.filename.lower().endswith(".pdf"):
+
+        doc = fitz.open(filepath)
+
+        for page in doc:
+            extracted_text += page.get_text()
+
+    else:
+
+        image = Image.open(filepath)
+        extracted_text = pytesseract.image_to_string(image)
 
     if extracted_text.strip() == "":
-        extracted_text = "No readable text detected in the image."
+        extracted_text = "No readable text detected."
 
 except Exception as e:
+
     extracted_text = f"OCR error: {str(e)}"
+
 
 # Semantic detection
 matches = find_similar_chapters(extracted_text)
