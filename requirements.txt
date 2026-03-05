@@ -1,8 +1,9 @@
 flask
 gunicorn
-sentence-transformers
 faiss-cpu
 groq
 pytesseract
 pillow
 numpy
+sentence-transformers==2.2.2
+torch==2.2.2
