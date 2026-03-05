@@ -9,6 +9,7 @@ import datetime
 import pytesseract
 from PIL import Image
 import fitz
+from groq import Groq
 
 # Load embedding model
 
@@ -29,6 +30,11 @@ app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 quiz_global = []
 subject_global = ""
 chapter_global = ""
+notes_global = ""
+
+# GROQ client
+
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 # ---------- Keyword Extraction ----------
 
@@ -114,7 +120,7 @@ return render_template("index.html")
 def upload():
 
 ```
-global quiz_global, subject_global, chapter_global
+global quiz_global, subject_global, chapter_global, notes_global
 
 if "file" not in request.files:
     return "No file uploaded"
@@ -130,7 +136,7 @@ os.makedirs(upload_folder, exist_ok=True)
 filepath = os.path.join(upload_folder, file.filename)
 file.save(filepath)
 
-# OCR or PDF extraction
+# OCR / PDF extraction
 try:
 
     extracted_text = ""
@@ -154,8 +160,8 @@ except Exception as e:
 
     extracted_text = f"OCR error: {str(e)}"
 
+notes_global = extracted_text
 
-# Semantic detection
 matches = find_similar_chapters(extracted_text)
 
 if matches[0]["score"] > 2:
@@ -164,10 +170,8 @@ if matches[0]["score"] > 2:
 top_subject = matches[0]["subject"]
 top_chapter = matches[0]["chapter"]
 
-# Keywords
 keywords = extract_keywords(extracted_text)
 
-# AI Generation
 summary = generate_summary(extracted_text, top_subject, top_chapter)
 
 quiz_json = generate_quiz(extracted_text, top_subject, top_chapter)
@@ -187,6 +191,43 @@ return render_template(
     summary=summary,
     quiz=quiz,
     keywords=keywords
+)
+```
+
+@app.route("/ask_ai", methods=["POST"])
+def ask_ai():
+
+```
+global notes_global
+
+question = request.form["question"]
+
+prompt = f"""
+```
+
+You are a helpful study assistant.
+
+Student Notes:
+{notes_global}
+
+Student Question:
+{question}
+
+Explain clearly.
+"""
+
+```
+chat = client.chat.completions.create(
+    model="llama3-8b-8192",
+    messages=[{"role":"user","content":prompt}]
+)
+
+answer = chat.choices[0].message.content
+
+return render_template(
+    "ai_answer.html",
+    question=question,
+    answer=answer
 )
 ```
 
@@ -222,6 +263,7 @@ for i, q in enumerate(quiz_global):
     })
 
 score = round((correct_count / total_questions) * 100, 2) if total_questions > 0 else 0
+
 save_score(score, subject_global, chapter_global)
 
 feedback = generate_feedback(score, subject_global, chapter_global)
@@ -299,7 +341,7 @@ return render_template(
 if **name** == "**main**":
 
 ```
-port = int(os.environ.get("PORT", 10000))
+port = int(os.environ.get("PORT",10000))
 
 app.run(host="0.0.0.0", port=port, debug=False)
 ```

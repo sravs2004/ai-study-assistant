@@ -1,36 +1,66 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-    <title>Result</title>
+<title>Result</title>
 </head>
+
 <body>
 
 <h2>File Uploaded Successfully!</h2>
+
 <p><strong>File name:</strong> {{ filename }}</p>
 
 <h3>Extracted Text</h3>
 <pre>{{ text }}</pre>
 
 <h3>Detected Subject & Chapter</h3>
+
 <p><strong>Main Match:</strong> {{ top_subject }} - {{ top_chapter }}</p>
+
 <p><strong>Confidence:</strong> {{ matches[0].confidence }}%</p>
 
 <h4>Top Matches</h4>
+
 <ul>
+
 {% for match in matches %}
+
 <li>{{ match.subject }} - {{ match.chapter }} ({{ match.confidence }}%)</li>
+
 {% endfor %}
+
 </ul>
 
 <h3>Important Keywords</h3>
+
 <ul>
+
 {% for word in keywords %}
+
 <li>{{ word }}</li>
+
 {% endfor %}
+
 </ul>
 
 <h2>Summary</h2>
+
 <p>{{ summary }}</p>
+
+<hr>
+
+<h2>Ask AI About Your Notes</h2>
+
+<form action="/ask_ai" method="post">
+
+<input type="text" name="question" placeholder="Ask anything about your notes" required>
+
+<button type="submit">Ask AI</button>
+
+</form>
+
+<hr>
 
 <h3>Time Remaining: <span id="timer">05:00</span></h3>
 
@@ -39,15 +69,21 @@
 <form method="post" action="/submit_quiz">
 
 {% for q in quiz %}
+
 {% set question_index = loop.index0 %}
 
 <p><strong>{{ loop.index }}. {{ q.question }}</strong></p>
 
 {% for option in q.options %}
+
 <input type="radio"
 name="q{{ question_index }}"
 value="{{ option.key }}">
-{{ option.key }}. {{ option.text }}<br>
+
+{{ option.key }}. {{ option.text }}
+
+<br>
+
 {% endfor %}
 
 <br>
