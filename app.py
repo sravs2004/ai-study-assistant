@@ -22,10 +22,11 @@ index = faiss.read_index("syllabus_index.faiss")
 # Load metadata
 
 with open("chapter_metadata.json", "r", encoding="utf-8") as f:
-chapter_metadata = json.load(f)
+    chapter_metadata = json.load(f)
 
 app = Flask(**name**)
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
+
 
 quiz_global = []
 subject_global = ""
