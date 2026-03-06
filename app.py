@@ -2,23 +2,11 @@ from flask import Flask, render_template, request
 import os
 from ai_engine import generate_summary, generate_quiz, generate_feedback, generate_study_links
 import json
-import numpy as np
-import faiss
-from sentence_transformers import SentenceTransformer
 import datetime
 import pytesseract
 from PIL import Image
 import fitz
-
-# Load embedding model
-model = None
-
-# Load FAISS index
-index = faiss.read_index("syllabus_index.faiss")
-
-# Load metadata
-with open("chapter_metadata.json", "r", encoding="utf-8") as f:
-    chapter_metadata = json.load(f)
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
@@ -26,6 +14,11 @@ app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 quiz_global = []
 subject_global = ""
 chapter_global = ""
+
+# Load metadata
+with open("chapter_metadata.json", "r", encoding="utf-8") as f:
+    chapter_metadata = json.load(f)
+
 
 # ---------- Keyword Extraction ----------
 def extract_keywords(text, top_k=5):
@@ -50,6 +43,7 @@ def extract_keywords(text, top_k=5):
     return keywords
 
 
+# ---------- Save Score ----------
 def save_score(score, subject, chapter):
 
     data = {
@@ -75,29 +69,32 @@ def save_score(score, subject, chapter):
         json.dump(records,f)
 
 
-# ---------- Semantic Search ----------
+# ---------- Semantic Search (Lightweight) ----------
 def find_similar_chapters(text, top_k=3):
-    global model
 
-    if model is None:
-        from sentence_transformers import SentenceTransformer
-        model = SentenceTransformer("all-MiniLM-L6-v2")
+    vectorizer = TfidfVectorizer()
 
-    query_embedding = model.encode([text])
-    query_embedding = np.array(query_embedding).astype("float32")
+    chapters = [c["chapter"] for c in chapter_metadata]
 
-    distances, indices = index.search(query_embedding, top_k)
+    vectors = vectorizer.fit_transform(chapters + [text])
+
+    query_vector = vectors[-1]
+    chapter_vectors = vectors[:-1]
+
+    scores = (chapter_vectors * query_vector.T).toarray().flatten()
+
+    ranked = scores.argsort()[::-1][:top_k]
 
     results = []
 
-    for i, idx in enumerate(indices[0]):
-        distance = float(distances[0][i])
-        confidence = round((1/(1+distance))*100,2)
+    for idx in ranked:
+
+        confidence = round(scores[idx] * 100, 2)
 
         results.append({
             "subject": chapter_metadata[idx]["subject"],
             "chapter": chapter_metadata[idx]["chapter"],
-            "score": distance,
+            "score": float(scores[idx]),
             "confidence": confidence
         })
 
@@ -128,7 +125,7 @@ def upload():
     filepath = os.path.join(upload_folder, file.filename)
     file.save(filepath)
 
-    # OCR or PDF extraction
+    # OCR / PDF extraction
     try:
 
         extracted_text = ""
@@ -155,9 +152,6 @@ def upload():
 
     # Semantic detection
     matches = find_similar_chapters(extracted_text)
-
-    if matches[0]["score"] > 2:
-        return "Uploaded notes do not match CBSE Class 10 syllabus."
 
     top_subject = matches[0]["subject"]
     top_chapter = matches[0]["chapter"]
@@ -238,6 +232,7 @@ def submit_quiz():
     )
 
 
+# ---------- Weak Topic Detection ----------
 def find_weak_topics(records):
 
     subject_scores = {}
@@ -292,6 +287,7 @@ def dashboard():
         records=records,
         weak_topics=weak_topics
     )
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
