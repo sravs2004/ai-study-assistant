@@ -11,7 +11,7 @@ from PIL import Image
 import fitz
 
 # Load embedding model
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = None
 
 # Load FAISS index
 index = faiss.read_index("syllabus_index.faiss")
@@ -77,6 +77,10 @@ def save_score(score, subject, chapter):
 
 # ---------- Semantic Search ----------
 def find_similar_chapters(text, top_k=3):
+    global model
+
+    if model is None:
+        model = SentenceTransformer("all-MiniLM-L6-v2")
 
     query_embedding = model.encode([text])
     query_embedding = np.array(query_embedding).astype("float32")
@@ -86,7 +90,6 @@ def find_similar_chapters(text, top_k=3):
     results = []
 
     for i, idx in enumerate(indices[0]):
-
         distance = float(distances[0][i])
         confidence = round((1/(1+distance))*100,2)
 
