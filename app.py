@@ -80,6 +80,7 @@ def find_similar_chapters(text, top_k=3):
     global model
 
     if model is None:
+        from sentence_transformers import SentenceTransformer
         model = SentenceTransformer("all-MiniLM-L6-v2")
 
     query_embedding = model.encode([text])
