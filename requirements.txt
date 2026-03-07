@@ -2,8 +2,9 @@ flask
 gunicorn
 faiss-cpu
 groq
-pytesseract
 pillow
 numpy
 sentence-transformers
 PyMuPDF
+easyocr
+scikit-learn

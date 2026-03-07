@@ -3,9 +3,9 @@ import os
 from ai_engine import generate_summary, generate_quiz, generate_feedback, generate_study_links
 import json
 import datetime
-import pytesseract
 from PIL import Image
 import fitz
+import easyocr
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 app = Flask(__name__)
@@ -18,6 +18,9 @@ chapter_global = ""
 # Load metadata
 with open("chapter_metadata.json", "r", encoding="utf-8") as f:
     chapter_metadata = json.load(f)
+
+# Initialize OCR reader
+reader = easyocr.Reader(['en'])
 
 
 # ---------- Keyword Extraction ----------
@@ -56,10 +59,8 @@ def save_score(score, subject, chapter):
     file = "progress.json"
 
     if os.path.exists(file):
-
         with open(file,"r") as f:
             records = json.load(f)
-
     else:
         records = []
 
@@ -69,7 +70,7 @@ def save_score(score, subject, chapter):
         json.dump(records,f)
 
 
-# ---------- Semantic Search (Lightweight) ----------
+# ---------- Semantic Search ----------
 def find_similar_chapters(text, top_k=3):
 
     vectorizer = TfidfVectorizer()
@@ -139,8 +140,8 @@ def upload():
 
         else:
 
-            image = Image.open(filepath)
-            extracted_text = pytesseract.image_to_string(image)
+            result = reader.readtext(filepath)
+            extracted_text = " ".join([text[1] for text in result])
 
         if extracted_text.strip() == "":
             extracted_text = "No readable text detected."
@@ -268,10 +269,8 @@ def dashboard():
     file = "progress.json"
 
     if os.path.exists(file):
-
         with open(file,"r") as f:
             records = json.load(f)
-
     else:
         records = []
 
