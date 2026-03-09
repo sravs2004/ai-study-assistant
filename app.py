@@ -18,10 +18,10 @@ with open("chapter_metadata.json", "r", encoding="utf-8") as f:
     chapter_metadata = json.load(f)
 
 
-# -------- Lazy OCR Loader (IMPORTANT) --------
+# -------- Lazy OCR Loader --------
 def get_ocr_reader():
     import easyocr
-    return easyocr.Reader(['en'], gpu=False)  # force CPU (less memory)
+    return easyocr.Reader(['en'], gpu=False)
 
 
 # ---------- Keyword Extraction ----------
@@ -143,9 +143,14 @@ def upload():
         else:
 
             reader = get_ocr_reader()
-            result = reader.readtext(filepath)
 
-            extracted_text = " ".join([text[1] for text in result])
+            # lighter OCR call
+            result = reader.readtext(filepath, detail=0, paragraph=True)
+
+            extracted_text = " ".join(result)
+
+            # free memory
+            del reader
 
         if extracted_text.strip() == "":
             extracted_text = "No readable text detected."
@@ -154,7 +159,6 @@ def upload():
         extracted_text = f"OCR error: {str(e)}"
 
 
-    # -------- Chapter Detection --------
     matches = find_similar_chapters(extracted_text)
 
     top_subject = matches[0]["subject"]
@@ -162,7 +166,6 @@ def upload():
 
     keywords = extract_keywords(extracted_text)
 
-    # -------- AI Generation --------
     summary = generate_summary(extracted_text, top_subject, top_chapter)
 
     quiz_json = generate_quiz(extracted_text, top_subject, top_chapter)
