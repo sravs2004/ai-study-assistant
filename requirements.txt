@@ -3,9 +3,9 @@ gunicorn
 faiss-cpu
 groq
 pillow
-numpy
-sentence-transformers
+numpy<2
 PyMuPDF
 easyocr
 scikit-learn
 torch==2.2.2
+opencv-python-headless

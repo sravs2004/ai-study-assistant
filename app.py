@@ -3,9 +3,7 @@ import os
 from ai_engine import generate_summary, generate_quiz, generate_feedback, generate_study_links
 import json
 import datetime
-from PIL import Image
 import fitz
-import easyocr
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 app = Flask(__name__)
@@ -19,8 +17,11 @@ chapter_global = ""
 with open("chapter_metadata.json", "r", encoding="utf-8") as f:
     chapter_metadata = json.load(f)
 
-# Initialize OCR reader
-reader = easyocr.Reader(['en'])
+
+# -------- Lazy OCR Loader (IMPORTANT) --------
+def get_ocr_reader():
+    import easyocr
+    return easyocr.Reader(['en'], gpu=False)  # force CPU (less memory)
 
 
 # ---------- Keyword Extraction ----------
@@ -126,11 +127,11 @@ def upload():
     filepath = os.path.join(upload_folder, file.filename)
     file.save(filepath)
 
-    # OCR / PDF extraction
+    extracted_text = ""
+
     try:
 
-        extracted_text = ""
-
+        # -------- PDF TEXT EXTRACTION --------
         if file.filename.lower().endswith(".pdf"):
 
             doc = fitz.open(filepath)
@@ -138,29 +139,30 @@ def upload():
             for page in doc:
                 extracted_text += page.get_text()
 
+        # -------- IMAGE OCR --------
         else:
 
+            reader = get_ocr_reader()
             result = reader.readtext(filepath)
+
             extracted_text = " ".join([text[1] for text in result])
 
         if extracted_text.strip() == "":
             extracted_text = "No readable text detected."
 
     except Exception as e:
-
         extracted_text = f"OCR error: {str(e)}"
 
 
-    # Semantic detection
+    # -------- Chapter Detection --------
     matches = find_similar_chapters(extracted_text)
 
     top_subject = matches[0]["subject"]
     top_chapter = matches[0]["chapter"]
 
-    # Keywords
     keywords = extract_keywords(extracted_text)
 
-    # AI Generation
+    # -------- AI Generation --------
     summary = generate_summary(extracted_text, top_subject, top_chapter)
 
     quiz_json = generate_quiz(extracted_text, top_subject, top_chapter)
@@ -233,36 +235,6 @@ def submit_quiz():
     )
 
 
-# ---------- Weak Topic Detection ----------
-def find_weak_topics(records):
-
-    subject_scores = {}
-
-    for r in records:
-
-        subject = r["subject"]
-        score = r["score"]
-
-        if subject not in subject_scores:
-            subject_scores[subject] = []
-
-        subject_scores[subject].append(score)
-
-    weak_topics = []
-
-    for subject, scores in subject_scores.items():
-
-        avg = sum(scores) / len(scores)
-
-        if avg < 60:
-            weak_topics.append({
-                "subject": subject,
-                "average": round(avg,2)
-            })
-
-    return weak_topics
-
-
 @app.route("/dashboard")
 def dashboard():
 
@@ -277,14 +249,11 @@ def dashboard():
     scores = [r["score"] for r in records]
     subjects = [r["subject"] for r in records]
 
-    weak_topics = find_weak_topics(records)
-
     return render_template(
         "dashboard.html",
         scores=scores,
         subjects=subjects,
-        records=records,
-        weak_topics=weak_topics
+        records=records
     )
 
 
