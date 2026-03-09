@@ -1,11 +1,11 @@
 flask
 gunicorn
-faiss-cpu
 groq
-pillow
+Pillow
 numpy<2
 PyMuPDF
 easyocr
-scikit-learn
 torch==2.2.2
+torchvision==0.17.2
+scikit-learn
 opencv-python-headless
